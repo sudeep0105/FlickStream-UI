@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09090d" />
+  <title>FlickStream — Stories worth staying in for</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="auth-required">
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="FlickStream home"><span class="brand-mark">▶</span><span>flick<b>stream</b></span></a>
+    <nav aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#trending">Series</a><a href="#movies">Movies</a><a href="#originals">Originals</a><a href="#my-list">My List</a></nav>
+    <div class="top-actions"><button class="icon-btn mobile-search" id="mobileSearch" aria-label="Search">⌕</button><button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button><div id="accountAction"><button class="signin-btn" id="openSignin">Sign in</button></div></div>
+  </header>
+  <main id="homeView">
+    <section class="hero" id="home"><div class="hero-content"><div class="eyebrow">FlickStream Original</div><h1>AFTER<br>THE LAST<br>LIGHT</h1><div class="hero-meta"><span class="match">98% Match</span><span>2025</span><span class="pill">16+</span><span>2h 08m</span></div><p>When the city goes dark, one radio host becomes the voice keeping an entire town alive. A story about finding light in the most unexpected places.</p><div class="hero-buttons"><button class="primary-btn" id="heroPlay"><span class="play">▶</span>Play now</button><button class="secondary-btn" id="heroInfo">ⓘ &nbsp;More info</button></div></div></section>
+    <div class="content">
+      <section class="section" id="trending"><div class="section-head"><h2>Trending this week</h2><button class="see-all">Explore all →</button></div><div class="cards" id="trendingCards"></div></section>
+      <section class="section" id="movies"><div class="section-head"><h2>Because you watched sci-fi</h2><button class="see-all">Explore all →</button></div><div class="cards" id="sciFiCards"></div></section>
+      <section class="section" id="originals"><div class="section-head"><h2>Only on FlickStream</h2><button class="see-all">Explore all →</button></div><div class="cards" id="originalCards"></div></section>
+    </div>
+      </main>
+  <section class="search-panel" id="searchPanel"><div class="search-head"><h2>Find your next story</h2><input class="search-input" id="searchInput" placeholder="Search titles, genres..." autocomplete="off"></div><div class="cards" id="searchResults"></div><div class="empty" id="searchEmpty">Start typing to explore FlickStream.</div></section>
+  <footer class="footer"><span>© 2025 FlickStream. Stories worth staying in for.</span><span>About &nbsp; Help Centre &nbsp; Terms of Use &nbsp; Privacy</span></footer>
+  <div class="modal-backdrop" id="authBackdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="authTitle"><button class="close" id="closeAuth" aria-label="Close">×</button><a class="brand" href="#"><span class="brand-mark">▶</span><span>flick<b>stream</b></span></a><h2 id="authTitle">Welcome back</h2><p class="modal-desc" id="authDesc">Sign in to continue watching.</p><p class="auth-disclaimer">Demo use only: enter made-up details, such as demo@example.com and a password you created for this demo. Do not use your real email or password.</p><form id="authForm" novalidate><div class="field" id="nameField" hidden><label for="nameInput">Your name</label><input id="nameInput" autocomplete="name" placeholder="Jamie Parker"></div><div class="field"><label for="emailInput">Email address</label><input id="emailInput" type="email" autocomplete="email" placeholder="you@example.com" required><div class="field-error" id="emailError" aria-live="polite"></div></div><div class="field"><label for="passwordInput">Password</label><input id="passwordInput" type="password" autocomplete="current-password" placeholder="At least 8 characters" required></div><div class="form-error" id="formError" aria-live="polite"></div><button class="submit-btn" id="submitAuth" type="submit">Sign in</button></form><p class="switch"><span id="switchPrompt">New to FlickStream?</span> <button class="link-btn" id="switchAuth">Create an account</button></p><p class="modal-note">By continuing, you agree to our Terms of Use and Privacy Policy.</p></section></div>
+  <div class="detail-backdrop" id="detailBackdrop"><section class="detail-modal" role="dialog" aria-modal="true"><button class="close" id="closeDetail" aria-label="Close">×</button><div class="detail-image" id="detailImage"></div><div class="detail-body"><div class="eyebrow">FlickStream pick</div><h2 id="detailTitle"></h2><div class="detail-meta" id="detailMeta"></div><p id="detailDescription"></p><button class="primary-btn" id="detailPlay">&#9654; &nbsp;Play now</button></div></section></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
+
